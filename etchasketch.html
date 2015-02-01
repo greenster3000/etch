@@ -10,7 +10,15 @@
 
 <body>
 	<h1>Etch-a-sketch 3000</h1>
-	<div id="buttonContainer"><input type="button" value="New Grid" onClick="generateGrid();"/></div>
+	<div class="buttons">
+		<input type="button" value="New Grid" onClick="generateGrid();"/>
+	</div>
+	<div class="buttons">
+		<input type="button" value = "Random" onClick="random();"/>
+		<input type="button" value = "Ghost" onClick="ghost();"/>
+		<input type="button" value = "Shade" onClicke="shade();"/>
+		<input type="button" value = "Permanent" onClick="permanent();"/>
+	</div>
 	<div id="container"></div>
 </body>
 

@@ -39,15 +39,34 @@ function generateGrid() {
 	};
 	var pixels = (960/width) - 2;
 	$(".square").css({"width": pixels, "height":pixels});
-	$(".square").hover(
-		function() {
-			$(this).addClass("highlight");
-		}, function() {
-			$(this).removeClass("highlight");
-		}
-	);
+	shade();
 };
 
-
+function ghost() {
+	$(".square").mouseenter(function(){
+		$(this).addClass("highlight");
+	});
+	$(".square").mouseleave(function(){
+		$(this).removeClass("highlight");
+	});
+	
+};
+function permanent() {
+	
+	$(".square").mouseenter(function(){
+		$(this).addClass("highlight");
+	});
+	$(".square").mouseleave(function(){
+		$(this).addClass("highlight");
+	});
+};
+function shade() {
+	$(".square").mouseenter(function(){
+		var ting = $(this).css("opacity");
+		ting -= 0.1;
+		$(this).css({"opacity": ting});
+	
+	});
+};
 	
 
